@@ -35,6 +35,17 @@ typedef void (^RunloopBlock)(void);
     [super viewDidLoad];
     [self addRunLoopObserver];
     
+    
+    UIButton *btn =[UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame =CGRectMake(100, 100, 100, 100);
+    btn.backgroundColor =[UIColor purpleColor];
+    btn.titleLabel.font =[UIFont systemFontOfSize:14];
+    [btn setTitle:@"登录" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(btnChick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    
     _tasks = [NSMutableArray array];
     _macQueueLength = 22;
     
