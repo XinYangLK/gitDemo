@@ -72,6 +72,9 @@ typedef void (^RunloopBlock)(void);
                       ];
     [self spiralMatrix:array];
 }
+- (void)btnChick:(UIButton *)sender {
+    NSLog(@"button-Chick");
+}
 #pragma mark -  冒泡排序
 - (void)bubbleSort:(NSMutableArray *)arr{
     
